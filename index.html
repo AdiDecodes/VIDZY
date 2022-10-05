@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidZY - Fast Video Saver</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="preloader"></div>
+    <!-- Header Starts -->
+    <nav>
+        <div class="logo">
+            <img src="logo.svg" alt="Logo Image">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a id="down" href="#Downloadsection">Sites Supported</a></li>
+        </ul>
+    </nav>
+    <!-- Header Ends -->
+    <!-- URL TextBox Section starts -->
+    <section class="container">
+        <div class="content">
+            <h1>VidZY - Fast Video Saver</h1>
+            <p>Ultimate Video Saver from top video sharing websites</p>
+            <form action="">
+                <input type="text" class="Inputfield" id="videoSearchBar" placeholder="Paste a video URL">
+            </form>
+            <div class="buttons">
+                <button-download onclick="foo(); loader()">Download</button-download>
+                <button-paste id="button">Paste from clipboard</button-paste>
+            </div>
+        </div>
+        <div class="sidecontainer">
+            <img class="sideImg" src="./header.webp" alt="">
+        </div>
+
+    </section>
+    <!-- Download View Starts -->
+    <section class="DownloadSection" id="Downloadsection">
+        <div class="leftAlign">
+            <img class="responseThumbnail" src="" alt="" onclick="redirect()">
+            <p class="title">Video Title goes here!</p>
+            <p class="author1">Video Owner</p>
+        </div>
+        <div class="rightAlign">
+            <a class="qualityBtnbox1" href="" target="_blank">
+                <div class="qualityBtn1">
+                    <span class="quality1">Download 720P</span>
+                    <span class="size1">450MB</span>
+                </div>
+            </a>
+            <a class="qualityBtnbox2" href="" target="_blank">
+                <div class="qualityBtn2" href="">
+                    <span class="quality2">Download 480P</span>
+                    <span class="size2">280MB</span>
+                </div>
+            </a>
+            <a class="qualityBtnbox3" href "" target="_blank">
+                <div class="qualityBtn3" href="">
+                    <span class="quality3">Download 360P</span>
+                    <span class="size3">130MB</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="DownloadSection" id="ErrorVideo">
+        <div class="leftAlign">
+            <p class="errotitle" id="Errortxt">Video Unavailable Or Invalid Link!</p>
+            <p class="error">Try Another youtube Link</p>
+        </div>
+    </section>
+
+    <!-- Sites supported section starts -->
+    <section id="iconsection" class="iconSection">
+        <h1 class="siteTitle">VidZY supports sites listed below</h1>
+        <div class="iconsContainer">
+            <div class="icons">
+                <img class="iconImage" src="./youtube.svg" alt="">
+                <p class="siteName">Youtube</p>
+            </div>
+            <div class="icons">
+                <img class="iconImage" src="./instagram.svg" alt="">
+                <p class="siteName">Instagram</p>
+            </div>
+            <div class="icons">
+                <img class="iconImage" src="./facebook.svg" alt="">
+                <p class="siteName">Facebook</p>
+            </div>
+            <div class="icons">
+                <img class="iconImage" src="./twitter.svg" alt="">
+                <p class="siteName">Twitter</p>
+            </div>
+            <div class="icons">
+                <img class="iconImage" src="./reddit.svg" alt="">
+                <p class="siteName">Reddit</p>
+            </div>
+    </section>
+    <!-- How to use section starts -->
+    <section class="guide">
+        <div class="left">
+            <p>How to use?</p>
+            <h1>VidZY</h1>
+            <p>Ultimate Video Downloader from Top Video sharing sites</p>
+            <div class="buttons">
+                <button-watch>Watch Tutorial</button-watch>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-content">
+                <div class="Infodiv">
+                    <i class="fa-solid fa-copy"></i>
+                    <div class="text">
+                        <p>Copy shareable link</p>
+                    </div>
+                </div>
+                <div class="Infodiv">
+                    <i class="fa-regular fa-paste"></i>
+                    <div class="text">
+                        <p>Paste The Video URL</p>
+                    </div>
+                </div>
+                <div class="Infodiv">
+                    <i class="fa-solid fa-download"></i>
+                    <div class="text">
+                        <p>Video gets downloaded</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer starts -->
+    <footer class="footer">
+        <div class="container1">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>VIDZY - Fast Video Saver!</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">How Vidzy works</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+</body>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".nav-links li");
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle("open");
+        links.forEach(link => {
+            link.classList.toggle("fade");
+        });
+
+        hamburger.classList.toggle("toggle");
+    });
+</script>
+
+<script>
+    var Id1 = document.getElementById("preloader");
+    function loader() {
+        Id1.style.display = 'flex';
+    }
+
+    const redirect = () => {
+        var url = document.getElementById("videoSearchBar").value;
+        if (url != "") {
+            window.open(url, "_blank");
+        }
+    }
+</script>
+
+</html>
