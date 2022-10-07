@@ -113,6 +113,19 @@ nav {
   max-width: 80%;
 }
 
+#Errortxt {
+  font-size: 2rem;
+  margin-top: 1rem;
+  padding-bottom: 0.1rem;
+  text-align: left;
+}
+
+.errortext {
+  font-size: 20px;
+  margin-top: 1rem;
+  text-align: left;
+}
+
 .rightAlign {
   display: flex;
   flex-direction: column;
@@ -435,10 +448,20 @@ button-watch:hover {
   padding-left: 2px;
 }
 
+.error {
+  padding-top: 2rem;
+  margin-left: 5%;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
 #ErrorVideo {
   display: none;
-  margin-left: 10%;
   width: auto;
+  justify-content: center;
+  margin: 10% 10% 10% 10%;
+  padding: 6rem 6rem;
 }
 
 .Infodiv {
@@ -516,6 +539,8 @@ button-watch:hover {
     display: none;
     margin-left: 10%;
     width: auto;
+    align-items: center;
+    flex-direction: column;
   }
 
   #button {

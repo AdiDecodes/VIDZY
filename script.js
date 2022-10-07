@@ -10,27 +10,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 async function foo() {
+  var url = document.getElementById("videoSearchBar").value;
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "58b932c646mshe173584bfaded5cp1d30c5jsn55df2dd57b36",
+      "X-RapidAPI-Key": "435ec0b7bfmshbf41945eb7fd82cp173a04jsnd5c26f1cb59a",
       "X-RapidAPI-Host": "youtube-video-download-info.p.rapidapi.com",
     },
   };
-  let text = document.getElementById("videoSearchBar").value;
-  if (text.includes("?list")) {
+
+  if (url.includes("?list")) {
     document.getElementById("Errortxt").innerHTML = "Playlist not supported";
+  } else if (url.at(url.length - 12) != "=" || url.at(url.length - 12) != "/") {
+    document.getElementById("Errortxt").innerHTML = "Invalid Video URL";
   }
+
   let res = await fetch(
-    `https://youtube-video-download-info.p.rapidapi.com/dl?id=${document
-      .getElementById("videoSearchBar")
-      .value.slice(-11)}`,
+    `https://youtube-video-download-info.p.rapidapi.com/dl?id=${url.slice(
+      -11
+    )}`,
     options
   );
-
+  console.log(url);
   let Data = await res.json();
-
-  document.querySelector(".DownloadSection").href = "#Downloadselection";
 
   if (Data.status === "fail") {
     var loaderid = document.getElementById("preloader");
@@ -39,10 +41,14 @@ async function foo() {
     errorid.style.display = "flex";
     var element = document.querySelector(".DownloadSection");
     element.style.display = "none";
+    document.getElementById("down").href = "#ErrorVideo";
+    var clickbtn = document.getElementById("down");
+    clickbtn.click();
     // document.getElementsByClassName("downloadSection");
     // var element = document.querySelector(".downloadSection");
     // element.style.display = "none";
   } else {
+    document.getElementById("down").href = "#Downloadsection";
     var clickbtn = document.getElementById("down");
     clickbtn.click();
     var loaderid = document.getElementById("preloader");
