@@ -79,8 +79,6 @@ async function foo() {
   }
 }
 
-const cors = require("cors");
-app.use({ origin: "http://127.0.0.1:5500" });
 async function insta() {
   var url = document.getElementById("videoSearchBar").value;
   const options = {
