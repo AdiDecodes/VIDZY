@@ -42,7 +42,7 @@
                 <input type="text" class="Inputfield" id="videoSearchBar" placeholder="Paste a video URL">
             </form>
             <div class="buttons">
-                <button-download onclick="insta()">Download</button-download>
+                <button-download onclick="checkUrl();">Download</button-download>
                 <button-paste id="button">Paste from clipboard</button-paste>
             </div>
         </div>
@@ -54,7 +54,7 @@
     <!-- Download View Starts -->
     <section class="DownloadSection" id="Downloadsection">
         <div class="leftAlign">
-            <img crossorigin="anonymous" class="responseThumbnail" src="" alt="" onclick="redirect()">
+            <img crossorigin="" class="responseThumbnail" src="" alt="" onclick="redirect()">
             <p class="title">Video Title goes here!</p>
             <p class="author1">Video Owner</p>
         </div>
@@ -71,7 +71,7 @@
                     <span class="size2">280MB</span>
                 </div>
             </a>
-            <a class="qualityBtnbox3" href "" target="_blank">
+            <a id="btn3" class="qualityBtnbox3" href "" target="_blank">
                 <div class="qualityBtn3" href="">
                     <span class="quality3">Download 360P</span>
                     <span class="size3">130MB</span>
@@ -99,8 +99,8 @@
                 <p class="siteName">Youtube</p>
             </div>
             <div class="icons">
-                <img class="iconImage" src="./instagram.svg" alt="">
-                <p class="siteName">Instagram</p>
+                <img class="iconImage" src="./facebook.svg" alt="">
+                <p class="siteName">Facebook</p>
             </div>
     </section>
     <!-- How to use section starts -->
