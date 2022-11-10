@@ -11,6 +11,13 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="./script.js" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -19,16 +26,15 @@
     <!-- Header Starts -->
     <nav>
         <div class="logo">
-            <img src="logo.svg" alt="Logo Image">
+            <p>VIDZY.</p>
         </div>
         <div class="hamburger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+            <div class="Home"></div>
+            <div class="How Vidzy Works"></div>
+            <div class="Privacy Policy"></div>
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="./about-us.html" target="_blank">About Us</a></li>
+            <li><a href="/index.html">Home</a></li>
             <li><a id="down" href="#iconsection">Sites Supported</a></li>
         </ul>
     </nav>
@@ -42,7 +48,7 @@
                 <input type="text" class="Inputfield" id="videoSearchBar" placeholder="Paste a video URL">
             </form>
             <div class="buttons">
-                <button-download onclick="checkUrl();">Download</button-download>
+                <button-download onclick="checkUrl()">Download</button-download>
                 <button-paste id="button">Paste from clipboard</button-paste>
             </div>
         </div>
@@ -54,7 +60,7 @@
     <!-- Download View Starts -->
     <section class="DownloadSection" id="Downloadsection">
         <div class="leftAlign">
-            <img crossorigin="" class="responseThumbnail" src="" alt="" onclick="redirect()">
+            <img class="responseThumbnail" src="" alt="" onclick="redirect()">
             <p class="title">Video Title goes here!</p>
             <p class="author1">Video Owner</p>
         </div>
@@ -65,7 +71,7 @@
                     <span class="size1">450MB</span>
                 </div>
             </a>
-            <a class="qualityBtnbox2" href="" target="_blank">
+            <a id="btn2" class="qualityBtnbox2" href="" target="_blank">
                 <div class="qualityBtn2" href="">
                     <span class="quality2">Download 480P</span>
                     <span class="size2">280MB</span>
@@ -92,7 +98,7 @@
 
     <!-- Sites supported section starts -->
     <section id="iconsection" class="iconSection">
-        <h1 class="siteTitle">VidZY supports sites listed below</h1>
+        <h1 class="siteTitle">VIDZY supports sites listed below</h1>
         <div class="iconsContainer">
             <div class="icons">
                 <img class="iconImage" src="./youtube.svg" alt="">
@@ -109,11 +115,6 @@
             <p>How to use?</p>
             <h1>VidZY</h1>
             <p>Ultimate Video Downloader from Top Video sharing sites</p>
-            <a class="buttons"
-                href "https://drive.google.com/file/d/10aseezZ8l_cFXqolcY4gcVeIiJMZ29ob/view?usp=share_link"
-                target="_blank">
-                <button-watch>Watch Tutorial</button-watch>
-            </a>
         </div>
         <div class=" right">
             <div class="right-content">
@@ -145,21 +146,19 @@
                 <div class="footer-col">
                     <h4>VIDZY - Fast Video Saver!</h4>
                     <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">How Vidzy works</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="/how-we-work.html">How Vidzy works</a></li>
+                        <li><a href="/privacy.html">Privacy policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
+                    <h4>Made with ❤ in India</h4>
+                    <!-- <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.instagram.com/_.adityyaa" target="_blank"><i
                                 class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

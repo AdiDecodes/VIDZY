@@ -31,8 +31,13 @@ nav {
 }
 
 .logo {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(255, 106, 130);
+  font-size: xx-large;
   padding: 1vh 1vw;
   text-align: center;
+  line-height: 50px;
+  height: 50px;
 }
 .logo img {
   height: 5rem;
@@ -187,7 +192,7 @@ nav {
     color: #fff;
   }
   .hamburger {
-    display: block;
+    display: none;
     position: absolute;
     cursor: pointer;
     right: 5%;
@@ -195,6 +200,7 @@ nav {
     transform: translate(-5%, -50%);
     z-index: 2;
     transition: all 0.7s ease;
+    color: #cacaca;
   }
 
   .DownloadSection {
