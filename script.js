@@ -70,7 +70,7 @@ async function yt(Url) {
     var clickbtn = document.getElementById("down");
     clickbtn.click();
   } else {
-    console.log(Data);
+    const Santitle = DOMPurify.sanitize(Data.title);
     document.getElementById("down").href = "#Downloadsection";
     var clickbtn = document.getElementById("down");
     clickbtn.click();
@@ -78,8 +78,7 @@ async function yt(Url) {
     loaderid.style.display = "none";
     var loaderid = document.getElementById("ErrorVideo");
     loaderid.style.display = "none";
-    document.querySelector(".title").innerHTML =
-      Data.title == "" ? "Untitled Video" : Data.title;
+    document.querySelector(".title").innerHTML = Santitle || "Untitled Video";
     document.querySelector(".responseThumbnail").src = Data.thumb;
     document.querySelector(".author1").innerHTML = "By " + Data.author;
     document.querySelector(".quality1").innerHTML =
@@ -146,7 +145,6 @@ async function fb(Url) {
       var clickbtn = document.getElementById("down");
       clickbtn.click();
     } else {
-      console.log(Data);
       if (Data == false) {
         var loaderid = document.getElementById("preloader");
         loaderid.style.display = "none";
@@ -158,7 +156,7 @@ async function fb(Url) {
         var clickbtn = document.getElementById("down");
         clickbtn.click();
       } else {
-        const SanTitle = DOMPurify.sanitize(title);
+        const SanTitle = DOMPurify.sanitize(Data.title);
         document.getElementById("down").href = "#Downloadsection";
         var clickbtn = document.getElementById("down");
         clickbtn.click();
@@ -168,7 +166,8 @@ async function fb(Url) {
         loaderid.style.display = "none";
         var element = document.querySelector(".DownloadSection");
         element.style.display = "flex";
-        document.querySelector(".title").innerHTML = SanTitle || 'Untitled Video';
+        document.querySelector(".title").innerHTML =
+          SanTitle || "Untitled Video";
         document.querySelector(".responseThumbnail").src = Data.thumbnail;
         document.querySelector(".author1").innerHTML = "By Facebook User";
         document.querySelector(".quality1").innerHTML = "Download High Quality";
