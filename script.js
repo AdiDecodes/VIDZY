@@ -89,7 +89,9 @@ async function yt(Url) {
       "Download " + DOMPurify.sanitize(Data.link[17][3]);
     document.querySelector(".size1").innerHTML =
       Data.link[17][1] == "" ? "Auto" : Data.link[17][1];
-    document.querySelector(".qualityBtnbox1").href = Data.link[17][0];
+    document.querySelector(".qualityBtnbox1").href = DOMPurify.sanitize(
+      Data.link[17][0]
+    );
     document.querySelector(".quality2").innerHTML =
       "Download " + DOMPurify.sanitize(Data.link[18][3]);
     document.querySelector(".size2").innerHTML =
